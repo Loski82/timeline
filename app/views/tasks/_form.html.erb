@@ -5,6 +5,8 @@
     <%= f.input :title %>
     <%= f.input :description %>
     <%= f.input :date %>
+    <%= f.association :user, label_method: :email %>
+    <%= f.association :project, label_method: :project_name %>
   </div>
 
   <div class="form-actions">
