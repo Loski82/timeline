@@ -19,6 +19,11 @@
   <strong>User:</strong>
   <%= @project.user.email %>
 </p>
+<% @project.tasks.each do | task | %>
+<h3><%= task.title %></h3>
+<%= task.description %>
+<%= task.date %>
+<% end %>
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>
