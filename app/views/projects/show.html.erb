@@ -19,8 +19,12 @@
   <strong>User:</strong>
   <%= @project.user.email %>
 </p>
+
+<p>
+  <strong> Tasks:</strong>
+</p>
 <% @project.tasks.each do | task | %>
-<h3><%= task.title %></h3>
+<%= task.title %>
 <%= task.description %>
 <%= task.date %>
 <% end %>

@@ -2,8 +2,7 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :user_id %>
-    <%= f.input :task_id %>
+    <%= f.association :user, label_method: :email %>
     <%= f.input :created_on %>
     <%= f.input :note %>
   </div>

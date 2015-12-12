@@ -50,3 +50,5 @@ end
 gem 'simple_form'
 gem 'friendly_id'
 gem 'devise'
+gem "intercom-rails"
+gem "slack-notify"
