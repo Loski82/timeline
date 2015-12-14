@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Created on:</strong>
   <%= @project.created_on %>
@@ -24,10 +22,13 @@
   <strong> Tasks:</strong>
 </p>
 <% @project.tasks.each do | task | %>
-<%= task.title %>
-<%= task.description %>
-<%= task.date %>
+<p>
+  <em><%= task.title %></em><br/>
+  <%= task.description %><br/>
+  <%= task.date %>
+</p>
 <% end %>
+
 
 <%= link_to 'Edit', edit_project_path(@project) %> |
 <%= link_to 'Back', projects_path %>

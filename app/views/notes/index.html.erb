@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Notes</h1>
+<h3>Your Notes</h3>
 
 <table class = "table">
   <thead>
@@ -16,13 +16,13 @@
   <tbody>
     <% @notes.each do |note| %>
       <tr>
-        <td><%= note.user_id %></td>
+        <td><%= note.user.email %></td>
         <td><%= note.task_id %></td>
         <td><%= note.created_on %></td>
         <td><%= note.note %></td>
-        <td><%= link_to 'Show', note %></td>
-        <td><%= link_to 'Edit', edit_note_path(note) %></td>
-        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', note, class: "btn btn-success" %></td>
+        <td><%= link_to 'Edit', edit_note_path(note), class: "btn btn-warning" %></td>
+        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Note', new_note_path %>
+<%= link_to 'New Note', new_note_path, class: "btn btn-primary" %>
